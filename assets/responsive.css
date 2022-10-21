@@ -1,0 +1,118 @@
+/* Responsive- Mobile */
+@media (max-width: 740px) {
+
+    .s-col-full {
+        width: 100%;
+    }
+
+    .moblie-member-mb {
+        margin-bottom: 24px;
+    }
+
+    .moblie-place-mb {
+        margin-bottom: 32px;
+
+    }
+
+    .moblie-contact-mb {
+        margin-bottom: 10px;
+    }
+
+    .header {
+        overflow: hidden;
+    }
+
+    .nav {
+        display: block;
+    }
+
+    .nav .sub-nav {
+        position: static;
+        top: none;
+        background-color: #000;
+    }
+
+    .header .search {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .header .nav li {
+        display: block;
+    }
+
+    .nav>li:first-child {
+        display: inline-block;
+    }
+
+    .nav>li:hover {
+        color: white;
+
+    }
+
+    .nav>li:last-child:hover::after {
+        border-top: 6px solid #fff;
+    }
+
+    .nav .sub-nav a {
+        color: #fff;
+    }
+
+    .nav .sub-nav a {
+        padding: 0 36px;
+    }
+
+    /* the band section */
+    .content .member-img {
+        width: 60%;
+    }
+
+    .content .member-img {
+        width: 60%;
+    }
+
+    .content .tickets-item {
+        width: 100%;
+        margin-bottom: 32px;
+    }
+
+    .content .contact-address {
+        width: 100%;
+        float: none;
+    }
+
+    .content .contact-input {
+        width: 100%;
+        margin-top: 20px;
+        float: none;
+    }
+
+    .content .contact-input input {
+        width: 100%;
+        line-height: 100px;
+
+    }
+
+    .content .tickets-btn {
+        padding: 13px 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .content .contact-btn {
+        padding: 13px 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .content input {
+        height: 48px;
+    }
+
+    .modal-body input {
+        height: 48px;
+    }
+}

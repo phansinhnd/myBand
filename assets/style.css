@@ -1,0 +1,624 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Lato', sans-serif;
+    font-size: 62.5%;
+}
+
+/* Begin: Common */
+.text-center {
+    text-align: center;
+}
+
+.pull-right {
+    float: right;
+}
+
+.clear {
+    clear: both;
+}
+
+.row {
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.row::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.col {
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.col-half {
+    width: 50%;
+}
+
+.col-third {
+    width: 33.33333%;
+}
+
+/* End: Common */
+
+
+/* Begin: Header */
+.header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 48px;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    z-index: 100;
+    box-shadow: 0 1px 8px 0 rgba(255, 255, 255, .2);
+}
+
+.nav {
+    list-style-type: none;
+    display: flex;
+}
+
+.nav>li {
+    position: relative;
+    display: inline-block;
+}
+
+.nav>li:hover {
+    color: #000;
+    background-color: #ccc;
+}
+
+.nav li a {
+    display: block;
+    height: 100%;
+    padding: 0 24px;
+    line-height: 48px;
+    font-size: 1.8rem;
+    color: #fff;
+}
+
+/* Arrow down */
+.nav>li:last-child::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(70px, 22px);
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-top: 6px solid white;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+}
+
+.nav>li:last-child:hover::before {
+    border-top: 6px solid black;
+}
+
+/* -------------------------*/
+
+
+.nav li:hover>a {
+    color: #000;
+    background-color: #ccc;
+}
+
+.nav .sub-nav {
+    display: none;
+    position: absolute;
+    top: 48px;
+    left: 0;
+    background-color: #fff;
+    color: black;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    list-style-type: none;
+}
+
+.nav .sub-nav a {
+    color: black;
+}
+
+.nav li:hover>.sub-nav {
+    display: block;
+
+}
+
+.header .search {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 48px;
+    height: 48px;
+}
+
+.header .search:hover {
+    background-color: #f05123;
+    cursor: pointer;
+}
+
+.header .search-icon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 38%;
+    height: 38%;
+    transform: translate(-50%, -50%);
+    fill: white;
+    cursor: pointer;
+}
+
+.menu-btn {
+    display: none;
+    position: absolute;
+    padding: 14px;
+    z-index: 200;
+    top: 0;
+    right: 0;
+}
+
+.menu-btn:hover {
+    background-color: #ccc;
+}
+
+.menu-btn:hover svg {
+    fill: #000;
+}
+
+.menu-btn svg {
+    display: block;
+    width: 18px;
+    height: 18px;
+    z-index: 101;
+    fill: #fff;
+}
+
+/* End: Header */
+
+/* Begin: banner */
+.banner {
+    width: 100%;
+    margin-top: 46px;
+    padding-top: 50%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.banner .text-content {
+    position: absolute;
+    bottom: 50px;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+}
+
+.banner .text-heading {
+    font-size: 2.5rem;
+    font-weight: 400;
+    text-shadow: 1px 0px black, 0px 1px black, -1px 0px black, 0px -1px black;
+
+}
+
+.banner .text-description {
+    margin-top: 20px;
+    font-size: 1.6rem;
+    text-shadow: 1px 0px black, 0px 1px black, -1px 0px black, 0px -1px black;
+}
+
+/* End: banner */
+
+
+/* Begin: The band */
+.content .content-section {
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 64px 16px;
+}
+
+.content .section-heading {
+    text-align: center;
+    font-size: 2.8rem;
+    font-weight: 400;
+    letter-spacing: 4px;
+}
+
+.content .section-sub-heading {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.6rem;
+    font-style: italic;
+    color: rgba(0, 0, 0, .5);
+}
+
+.content .description-content {
+    margin-top: 20px;
+    margin-bottom: 47px;
+    font-size: 1.5rem;
+    text-align: justify;
+    line-height: 1.5;
+}
+
+.content .member-name {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.content .member-img {
+    width: 154px;
+    margin-top: 15px;
+    border-radius: 4px;
+}
+
+/* End: The band */
+
+
+/*  Begin: Tour Dates  */
+.content .wrapper-tour {
+    width: 100%;
+    background-color: #000;
+}
+
+.content .tour-dates-bg {
+    background-color: #000;
+}
+
+.content .heading-color {
+    color: #fff;
+}
+
+.content .sub-color {
+    color: rgba(255, 255, 255, .5);
+}
+
+.content .dates-box {
+    margin-top: 40px;
+    list-style-type: none;
+    background-color: #fff;
+}
+
+.content .date-item {
+    padding: 14px;
+    font-size: 1.5rem;
+    border-bottom: 1px solid #ccc;
+    color: rgba(0, 0, 0, .6);
+}
+
+.content .dates-box span {
+    padding: 4px 8px;
+    margin-left: 16px;
+    color: #fff;
+    background-color: red;
+}
+
+.content span.tickets-number {
+    float: right;
+    margin-top: -4px;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.content .tickets-list {
+    margin-top: 32px;
+    background-color: #000;
+    list-style-type: none;
+}
+
+.content .place-img {
+    display: block;
+    width: 100%;
+}
+
+.content .place-img:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.content .place-body {
+    background-color: white;
+    font-size: 1.5rem;
+    padding: 16px;
+}
+
+.content .place-heading {
+    font-weight: 600;
+}
+
+.content .place-date {
+    margin-top: 16px;
+    color: rgba(0, 0, 0, .5);
+
+}
+
+.content .place-description {
+    margin-top: 16px;
+}
+
+.content .tickets-btn {
+    display: inline-block;
+    margin-top: 16px;
+    padding: 10px 16px;
+    font-size: 1.8rem;
+    color: #fff;
+    background-color: #000;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.content .tickets-btn:hover {
+    background-color: #ccc;
+    color: black;
+}
+
+/*  End: Tour Dates  */
+
+/* Begin: Contact */
+.content .contact-wrapper {
+    margin-top: 32px;
+}
+
+.content .text-contact-infor {
+    font-size: 1.8rem;
+}
+
+.content .text-contact {
+    margin-top: 6px;
+}
+
+.content .text-contact svg {
+    height: 16px;
+    margin-right: 20px;
+}
+
+.content input {
+    outline: none;
+    width: 100%;
+    font-size: 1.4rem;
+    height: 40px;
+    border: 1px solid #ccc;
+    margin-bottom: 8px;
+    padding-left: 16px;
+}
+
+.content .contact-btn {
+    display: inline-block;
+    font-size: 1.8rem;
+    line-height: 1.2;
+    margin-top: 12px;
+    padding: 10px 16px;
+    color: #fff;
+    background-color: #000;
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.content .contact-btn:hover {
+    background-color: #ccc;
+    color: #000;
+}
+.phone {
+    color: blue;
+}
+.text-contact a {
+    color: blue;
+}
+/* End: Contact */
+
+/*  Begin: Map  */
+.map {
+    padding-top: calc((838 / 1489) * 100%);
+    width: 100%;
+    background: url(../assets/images/map.jpg) center / cover no-repeat;
+}
+
+/*  End: Map  */
+
+
+/*Begin: Footer */
+.footer {
+    text-align: center;
+    padding: 64px 16px;
+    background-color: #f4f4f4;
+}
+
+.footer .social-list {
+    margin: auto;
+}
+
+.footer .social-list svg {
+    width: 2.2rem;
+    margin-right: 10px;
+    fill: rgba(0, 0, 0, .6);
+}
+
+.footer .social-list svg:hover {
+    fill: rgba(0, 0, 0, .4);
+    cursor: pointer;
+}
+
+.footer .text-social {
+    font-size: 1.5rem;
+    margin-top: 30px;
+    color: rgba(0, 0, 0, .5);
+}
+
+.footer .text-social .name {
+    font-size: 1.5rem;
+    color: rgb(0, 0, 0);
+}
+
+.footer .text-social .icon {
+    font-size: 1.5rem;
+    color: #f05123
+}
+
+/* End: Footer */
+
+/* Begin: Modal */
+.modal {
+    position: fixed;
+    z-index: 200;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    animation: modalmove ease 0.4s;
+}
+
+.modal.open {
+    display: flex;
+}
+
+.modal-container {
+    position: relative;
+    max-width: 800px;
+    width: calc(100% - 32px);
+    margin: 0 0px;
+    background-color: #fff;
+
+}
+
+.modal-container .modal-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 20px;
+    font-size: 14px;
+    color: #fff;
+}
+
+.modal-container .modal-close:hover {
+    color: #000;
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+.modal-header {
+    height: 120px;
+    font-size: 26px;
+    letter-spacing: 4px;
+    background-color: #009688;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-header i {
+    margin-right: 16px;
+}
+
+.modal-body .modal-lable i {
+    margin-right: 8px;
+}
+
+.modal-body input {
+    width: 100%;
+    height: 40px;
+    padding-left: 16px;
+    margin-top: 8px;
+    margin-bottom: 16px;
+    font-size: 1.6rem;
+    color: #333;
+    border: 1px solid #ccc;
+    outliner: none;
+}
+
+.modal-body {
+    padding: 16px;
+}
+
+.modal .modal-lable {
+    display: block;
+    font-size: 1.6rem;
+}
+
+.modal-body button {
+    display: block;
+    width: 100%;
+    padding: 14px 0;
+    border: none;
+    background-color: #009688;
+    color: #fff;
+    font-size: 1.6rem;
+    border-radius: 3px;
+}
+
+.modal-body button:hover {
+    color: #000;
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+.modal-footer {
+    padding: 16px;
+    font-size: 1.6rem;
+
+}
+
+.modal-footer .footer-close {
+    display: inline-block;
+    padding: 8px;
+    font-size: 1.6rem;
+    color: #fff;
+    background-color: #f05123;
+    cursor: pointer;
+}
+
+.modal-footer .footer-close:hover {
+    color: #000;
+    background-color: #ccc;
+}
+
+.modal-footer .footer-close .ti-close {
+    font-size: 1.2rem;
+    margin-left: 6px;
+}
+
+.modal-footer .modal-help {
+    float: right;
+}
+
+.modal-footer .modal-help a {
+    color: blue;
+    text-decoration: underline;
+}
+
+/* End: Modal */
+
+/* Animation */
+@keyframes modalmove {
+    from {
+        opacity: 0.5;
+        transform: translateY(-200px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
